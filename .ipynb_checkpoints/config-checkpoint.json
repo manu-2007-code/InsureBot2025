@@ -1,0 +1,16 @@
+{
+  "intents": [
+    {
+      "questions": ["hello", "hi", "hey"],
+      "answers": ["Hello! How can I help you today?"]
+    },
+    {
+      "questions": ["what is your name", "who are you"],
+      "answers": ["I am InsureBot, your virtual assistant."]
+    },
+    {
+      "questions": ["bye", "goodbye"],
+      "answers": ["Goodbye! Have a nice day."]
+    }
+  ]
+}
