@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>InsureBot - Voice AI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <!-- Voice Interface -->
+  <div id="voiceInterface" class="interface active">
+    <h1><i class="fas fa-robot"></i> Welcome to InsureBot</h1>
+    <div class="voice-waves">
+      <div class="wave-line"></div>
+      <div class="wave-line"></div>
+      <div class="wave-line"></div>
+      <div class="wave-line"></div>
+      <div class="wave-line"></div>
+    </div>
+    <button onclick="startVoice()" class="mic-button">
+      <i class="fas fa-microphone"></i> Talk
+    </button>
+    <div id="voiceResult" class="message-box"></div>
+    <div class="icon-bar">
+      <button onclick="showInterface('chatInterface')" title="Go to Chat"><i class="fas fa-comment-dots"></i></button>
+      <button onclick="showInterface('historyInterface')" title="Chat History"><i class="fas fa-history"></i></button>
+    </div>
+  </div>
+
+  <!-- Chat Interface -->
+  <div id="chatInterface" class="interface">
+    <h1><i class="fas fa-comments"></i> Live Chat</h1>
+    <div id="chatMessages"></div>
+    <div class="input-area">
+      <input type="text" id="chatInput" placeholder="Type your message..." />
+      <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+    </div>
+    <div class="icon-bar">
+      <button onclick="showInterface('voiceInterface')" title="Back to Voice"><i class="fas fa-microphone-alt"></i></button>
+      <button onclick="showInterface('historyInterface')" title="Chat History"><i class="fas fa-history"></i></button>
+    </div>
+  </div>
+
+  <!-- History Interface -->
+  <div id="historyInterface" class="interface">
+    <h1><i class="fas fa-clock"></i> Chat History</h1>
+    <div id="historyMessages"></div>
+    <div class="icon-bar">
+      <button onclick="showInterface('voiceInterface')" title="Back to Voice"><i class="fas fa-microphone-alt"></i></button>
+      <button onclick="showInterface('chatInterface')" title="Go to Chat"><i class="fas fa-comment-dots"></i></button>
+    </div>
+  </div>
+
+  <script src="/static/frontend.js?v=1.0.0"></script>
+</body>
+</html>
